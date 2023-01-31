@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KxOsSgOYZs9ebGo1xqK6dyQgbDFWPDLl3xJ8oZImDpKj+NS57wI72KropRK3LteezNeWB0VbFG0qyQjdmEwbMA==",
+  "dgSpecHash": "/mCdl0kPJPkg5DHToV8h3PFtUt8Uqf6WORQQPj/2w5M7dxtr8cZCYfwfZp8C8DEoLGGd+ZSsMT0trwBmh/xMRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\Resources From Fish\\MetalFromFish\\MetalFromFish.csproj",
+  "projectFilePath": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\MetalFromFish\\MetalFromFish.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jaide\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
     "C:\\Users\\jaide\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaide\\Coding Projects\\Subnautica\\Resources From Fish\\MetalFromFish\\MetalFromFish.csproj": {}
+    "C:\\Users\\jaide\\Coding Projects\\Subnautica\\MetalFromFish\\MetalFromFish.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaide\\Coding Projects\\Subnautica\\Resources From Fish\\MetalFromFish\\MetalFromFish.csproj": {
+    "C:\\Users\\jaide\\Coding Projects\\Subnautica\\MetalFromFish\\MetalFromFish.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\Resources From Fish\\MetalFromFish\\MetalFromFish.csproj",
+        "projectUniqueName": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\MetalFromFish\\MetalFromFish.csproj",
         "projectName": "MetalFromFish_SN",
-        "projectPath": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\Resources From Fish\\MetalFromFish\\MetalFromFish.csproj",
+        "projectPath": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\MetalFromFish\\MetalFromFish.csproj",
         "packagesPath": "C:\\Users\\jaide\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\Resources From Fish\\MetalFromFish\\obj\\",
+        "outputPath": "C:\\Users\\jaide\\Coding Projects\\Subnautica\\MetalFromFish\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jaide\\Coding Projects\\Subnautica\\Resources From Fish\\MetalFromFish\\NuGet.Config",
+          "C:\\Users\\jaide\\Coding Projects\\Subnautica\\MetalFromFish\\NuGet.Config",
           "C:\\Users\\jaide\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
