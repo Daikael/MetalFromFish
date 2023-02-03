@@ -37,7 +37,8 @@ namespace MetalFromFish
                 },
                 LinkedItems = new List<TechType>()
                 {
-                    TechType.Lithium
+                    TechType.Lithium,
+                    BioBottle.thisTechType
                 }
             };
         }
@@ -64,7 +65,6 @@ namespace MetalFromFish
         public static Atlas.Sprite GetSprite(string name)
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(MetalFromFish_SNHelpers.assetFolderPath, name + ".png"));
-
         }
     }
 }

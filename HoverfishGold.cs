@@ -37,7 +37,7 @@ namespace MetalFromFish
                 },
                 LinkedItems = new List<TechType>()
                 {
-                    TechType.Quartz
+                    TechType.Gold
                 }
             };
         }
