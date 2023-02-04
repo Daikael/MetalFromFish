@@ -9,21 +9,21 @@ using System.IO;
 
 namespace MetalFromFish
 {
-    internal class PeeperTitanium : Craftable
+    internal class WasteToFood : Craftable
     {
         public static TechType thisTechType;
-        public static Sprite sprite = GetSprite("DTTitanium");
+        public static Sprite sprite = SpriteManager.Get(TechType.NutrientBlock);
 
-        public PeeperTitanium() : base("DTTitanium", "Titanium Extraction", "Titanium extracted from a Peeper. Added by Metal From Fish.")
+        public WasteToFood() : base("DTNutrient", "Nutrient Reclemation", "A block of nutrients salvaged from biological waste. Edible, but barely.")
         {
             OnFinishedPatching += () =>
             {
-                thisTechType = TechType;
+                WasteToFood.thisTechType = base.TechType;
             };
         }
 
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
-        public override string[] StepsToFabricatorTab => new string[] { "Resources", "MFF", "MFFP" };
+        public override string[] StepsToFabricatorTab => new string[] { "Resources", "MFF", "MFFR" };
         public override float CraftingTime => 2f;
 
         protected override TechData GetBlueprintRecipe()
@@ -33,18 +33,19 @@ namespace MetalFromFish
                 craftAmount = 0,
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient(TechType.Peeper, 3)
+                    new Ingredient(TechType.CreepvinePiece, 1),
+                    new Ingredient(BioBottle.thisTechType, 1)
                 },
                 LinkedItems = new List<TechType>()
                 {
-                    TechType.Titanium,
-                    BioBottle.thisTechType
+                    TechType.NutrientBlock
                 }
             };
         }
+
         public override IEnumerator GetGameObjectAsync(IOut<GameObject> gameObject)
         {
-            var task = CraftData.GetPrefabForTechTypeAsync(TechType.Titanium);
+            var task = CraftData.GetPrefabForTechTypeAsync(TechType.NutrientBlock);
             yield return task;
             var modifiedPrefab = GameObject.Instantiate(task.GetResult());
 
@@ -57,15 +58,11 @@ namespace MetalFromFish
 
             gameObject.Set(modifiedPrefab);
         }
+
         protected override Sprite GetItemSprite()
         {
             var ChangedSprite = sprite;
             return ChangedSprite;
-        }
-        public static Atlas.Sprite GetSprite(string name)
-        {
-            return ImageUtils.LoadSpriteFromFile(Path.Combine(MetalFromFish_SNHelpers.assetFolderPath, name + ".png"));
-
         }
     }
 }

@@ -24,7 +24,7 @@ namespace MetalFromFish
         }
 
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
-        public override string[] StepsToFabricatorTab => new string[] { "Resources", "MFF" };
+        public override string[] StepsToFabricatorTab => new string[] { "Resources", "MFF", "MFFP" };
         public override float CraftingTime => 2f;
 
         protected override TechData GetBlueprintRecipe()
@@ -38,7 +38,8 @@ namespace MetalFromFish
                 },
                 LinkedItems = new List<TechType>()
                 {
-                    TechType.Silver
+                    TechType.Silver,
+                    BioBottle.thisTechType
                 }
             };
         }

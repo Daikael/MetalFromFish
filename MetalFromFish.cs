@@ -1,9 +1,10 @@
-﻿using System;
-using SMLHelper.V2.Handlers;
-using BepInEx;
+﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using System.Reflection;
+using SMLHelper.V2.Handlers;
+using SMLHelper.V2.Utility;
+using System;
+using Sprite = Atlas.Sprite;
 using System.IO;
 
 namespace MetalFromFish.craftable
@@ -13,10 +14,15 @@ namespace MetalFromFish.craftable
     {
         private const string myGUID = "Daikael.MetalFromFish";
         private const string pluginName = "Metal From Fsh";
-        private const string versionString = "1.2.1";
+        private const string versionString = "1.2.0";
         private static readonly Harmony harmony = new Harmony(myGUID);
 
         public static ManualLogSource logger;
+
+        public static Atlas.Sprite GetSprite(string name)
+        {
+            return ImageUtils.LoadSpriteFromFile(Path.Combine(MetalFromFish_SNHelpers.assetFolderPath, name + ".png"));
+        }
 
         public void Awake()
         {
@@ -33,12 +39,24 @@ namespace MetalFromFish.craftable
             new EyeyeMagnetite().Patch();
             new SpadefishSilver().Patch();
             new HoverfishGold().Patch();
+            new WasteToFood().Patch();
 
-            CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "MFF", "Fish Processing", SpriteManager.Get(TechType.Reginald), new string[]
+            CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "MFF", "Fish Economy", SpriteManager.Get(TechType.Reginald), new string[]
             {
                 "Resources"
             });
+            CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "MFFP", "Fish Processing", GetSprite("DTBioBottle"), new string[]
+{
+                "Resources",
+                "MFF"
+});
+            CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "MFFR", "Food Recycling", SpriteManager.Get(TechType.NutrientBlock), new string[]
+{
+                "Resources",
+                "MFF"
+});
             Console.WriteLine("DT-1 Fabricator Tab loaded");
+
         }
     }
 }

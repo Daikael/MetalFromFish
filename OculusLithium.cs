@@ -23,7 +23,7 @@ namespace MetalFromFish
         }
 
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
-        public override string[] StepsToFabricatorTab => new string[] { "Resources", "MFF" };
+        public override string[] StepsToFabricatorTab => new string[] { "Resources", "MFF", "MFFP" };
         public override float CraftingTime => 2f;
 
         protected override TechData GetBlueprintRecipe()
@@ -42,6 +42,7 @@ namespace MetalFromFish
                 }
             };
         }
+
         public override IEnumerator GetGameObjectAsync(IOut<GameObject> gameObject)
         {
             var task = CraftData.GetPrefabForTechTypeAsync(TechType.Lithium);
@@ -57,11 +58,13 @@ namespace MetalFromFish
 
             gameObject.Set(modifiedPrefab);
         }
+
         protected override Sprite GetItemSprite()
         {
             var ChangedSprite = sprite;
             return ChangedSprite;
         }
+
         public static Atlas.Sprite GetSprite(string name)
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(MetalFromFish_SNHelpers.assetFolderPath, name + ".png"));
