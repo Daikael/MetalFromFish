@@ -23,6 +23,7 @@ namespace MetalFromFish.craftable
             harmony.PatchAll();
             Logger.LogInfo(pluginName + " " + versionString + " " + "loaded.");
             logger = Logger;
+            new BioBottle().Patch();
             new BladderFishCopper().Patch();
             new PeeperTitanium().Patch();
             new BoomerangQuartz().Patch();
@@ -32,7 +33,6 @@ namespace MetalFromFish.craftable
             new EyeyeMagnetite().Patch();
             new SpadefishSilver().Patch();
             new HoverfishGold().Patch();
-            new BioBottle().Patch();
 
             CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "MFF", "Fish Processing", SpriteManager.Get(TechType.Reginald), new string[]
             {

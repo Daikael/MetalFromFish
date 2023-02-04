@@ -9,5 +9,5 @@ internal static class MetalFromFish_SNHelpers
     internal static string assetFolderPath = Path.Combine(MetalFromFish_SNHelpers.ModPath, @"Assets\Icons");
     internal static string textureFolderPath = Path.Combine(MetalFromFish_SNHelpers.ModPath, @"Assets\Textures");
     internal static string modelFolderPath = Path.Combine(MetalFromFish_SNHelpers.ModPath, @"Assets\Models");
-    internal static AssetBundle assetbundle = AssetBundle.LoadFromFile(modelFolderPath);
+    internal static AssetBundle bottleassetbundle = AssetBundle.LoadFromFile(Path.Combine(modelFolderPath, "BioBottle.subasset"));
 }

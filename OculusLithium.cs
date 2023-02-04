@@ -18,7 +18,7 @@ namespace MetalFromFish
         {
             OnFinishedPatching += () =>
             {
-                thisTechType = TechType;
+                OculusLithium.thisTechType = base.TechType;
             };
         }
 
@@ -37,8 +37,8 @@ namespace MetalFromFish
                 },
                 LinkedItems = new List<TechType>()
                 {
-                    TechType.Lithium,
-                    BioBottle.thisTechType
+                    BioBottle.thisTechType,
+                    TechType.Lithium
                 }
             };
         }
