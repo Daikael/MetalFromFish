@@ -61,7 +61,7 @@ namespace MetalFromFish
 
         public override IEnumerator GetGameObjectAsync(IOut<GameObject> gameObject)
         {
-            var task = CraftData.GetPrefabForTechTypeAsync(TechType.Sulphur);
+            var task = CraftData.GetPrefabForTechTypeAsync(TechType.StalkerTooth);
             yield return task;
             var modifiedPrefab = GameObject.Instantiate(task.GetResult());
 
