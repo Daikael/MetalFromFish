@@ -9,16 +9,16 @@ using System.IO;
 
 namespace MetalFromFish
 {
-    internal class BladderFishCopper : Craftable
+    internal class CrashfishCaveSulphur : Craftable
     {
         public static TechType thisTechType;
-        public static Sprite sprite = GetSprite("DTCopper");
+        public static Sprite sprite = GetSprite("DTSulphur");
 
-        public BladderFishCopper() : base("DTCopper", "Copper Extraction", "Copper extracted from a Bladderfish. Added by Metal From Fish.")
+        public CrashfishCaveSulphur() : base("DTSulphur", "Sulphur Extraction", "Sulphur extracted from an Crashfish.")
         {
             OnFinishedPatching += () =>
             {
-                thisTechType = TechType;
+                CrashfishCaveSulphur.thisTechType = base.TechType;
             };
         }
 
@@ -35,10 +35,10 @@ namespace MetalFromFish
             // Create a list to hold the linked items
             List<TechType> linkedItems = new List<TechType>();
 
-            // Add the appropriate number of TechType.Copper entries to the linkedItems list
+            // Add the appropriate number of TechType.CrashPowder entries to the linkedItems list
             for (int i = 0; i < outputCount; i++)
             {
-                linkedItems.Add(TechType.Copper);
+                linkedItems.Add(TechType.CrashPowder);
             }
 
             // Add the appropriate number of BioBottle.thisTechType entries to the linkedItems list
@@ -53,7 +53,7 @@ namespace MetalFromFish
                 craftAmount = 0,
                 Ingredients = new List<Ingredient>
         {
-            new Ingredient(TechType.Bladderfish, MetalFromFish_SNHelpers.Config.RCost)
+            new Ingredient(TechType.Crash, MetalFromFish_SNHelpers.Config.RCost)
         },
                 LinkedItems = linkedItems
             };
@@ -61,7 +61,7 @@ namespace MetalFromFish
 
         public override IEnumerator GetGameObjectAsync(IOut<GameObject> gameObject)
         {
-            var task = CraftData.GetPrefabForTechTypeAsync(TechType.Copper);
+            var task = CraftData.GetPrefabForTechTypeAsync(TechType.Sulphur);
             yield return task;
             var modifiedPrefab = GameObject.Instantiate(task.GetResult());
 
@@ -74,16 +74,16 @@ namespace MetalFromFish
 
             gameObject.Set(modifiedPrefab);
         }
+
         protected override Sprite GetItemSprite()
         {
             var ChangedSprite = sprite;
             return ChangedSprite;
         }
+
         public static Atlas.Sprite GetSprite(string name)
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(MetalFromFish_SNHelpers.assetFolderPath, name + ".png"));
-
         }
     }
 }
-

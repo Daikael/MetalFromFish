@@ -28,18 +28,34 @@ namespace MetalFromFish
 
         protected override TechData GetBlueprintRecipe()
         {
+            // Obtain the output and byproduct values from the configuration
+            int outputCount = MetalFromFish_SNHelpers.Config.Output;
+            int byproductCount = MetalFromFish_SNHelpers.Config.Byproduct;
+
+            // Create a list to hold the linked items
+            List<TechType> linkedItems = new List<TechType>();
+
+            // Add the appropriate number of TechType.Lithium entries to the linkedItems list
+            for (int i = 0; i < outputCount; i++)
+            {
+                linkedItems.Add(TechType.Lithium);
+            }
+
+            // Add the appropriate number of BioBottle.thisTechType entries to the linkedItems list
+            for (int i = 0; i < byproductCount; i++)
+            {
+                linkedItems.Add(BioBottle.thisTechType);
+            }
+
+            // Create and return the TechData object
             return new TechData()
             {
                 craftAmount = 0,
                 Ingredients = new List<Ingredient>
-                {
-                    new Ingredient(TechType.Oculus, 3)
-                },
-                LinkedItems = new List<TechType>()
-                {
-                    BioBottle.thisTechType,
-                    TechType.Lithium
-                }
+        {
+            new Ingredient(TechType.Oculus, MetalFromFish_SNHelpers.Config.RCost)
+        },
+                LinkedItems = linkedItems
             };
         }
 

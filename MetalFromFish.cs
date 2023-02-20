@@ -14,8 +14,9 @@ namespace MetalFromFish.craftable
     {
         private const string myGUID = "Daikael.MetalFromFish";
         private const string pluginName = "Metal From Fsh";
-        private const string versionString = "1.2.0";
+        private const string versionString = "1.3.0";
         private static readonly Harmony harmony = new Harmony(myGUID);
+
 
         public static ManualLogSource logger;
 
@@ -39,6 +40,11 @@ namespace MetalFromFish.craftable
             new EyeyeMagnetite().Patch();
             new SpadefishSilver().Patch();
             new HoverfishGold().Patch();
+            new CrashfishCaveSulphur().Patch();
+            new RedeyeyeCrystalSulphur().Patch();
+            new SpinefishNickle().Patch();
+            new HolefishTooth().Patch();
+            new MagmarangKyanite().Patch();
             new WasteToFood().Patch();
 
             CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "MFF", "Fish Economy", SpriteManager.Get(TechType.Reginald), new string[]
