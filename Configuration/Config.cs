@@ -19,6 +19,10 @@ namespace MetalFromFish.Configuration
 
         [Slider("Byproduct output", 0, 8, DefaultValue = 1, Step = 1f, Tooltip = "Controls the Byproduct volume per craft operation, set to 0 to disable"), OnChange(nameof(ApplyOptions))]
         public int Byproduct = 1;
+
+        [Slider("Byprouct fuel value", 10, 4000, DefaultValue = 500, Step = 10f, Tooltip = "Controls the amount of power produced when placed in a bioreactor."), OnChange(nameof(ApplyOptions))]
+        public int BPower = 500;
+
         public void ApplyOptions()
         {
             harmony.PatchAll();

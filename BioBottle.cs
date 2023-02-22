@@ -21,7 +21,9 @@ namespace MetalFromFish
         {
             OnFinishedPatching += () =>
             {
+                int bpower = MetalFromFish_SNHelpers.Config.BPower;
                 BioBottle.thisTechType = base.TechType;
+                BioReactorHandler.SetBioReactorCharge(BioBottle.thisTechType, bpower);
             };
         }
 

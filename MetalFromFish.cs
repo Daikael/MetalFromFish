@@ -14,7 +14,7 @@ namespace MetalFromFish.craftable
     {
         private const string myGUID = "Daikael.MetalFromFish";
         private const string pluginName = "Metal From Fsh";
-        private const string versionString = "1.3.1";
+        private const string versionString = "1.4.0";
         private static readonly Harmony harmony = new Harmony(myGUID);
 
 

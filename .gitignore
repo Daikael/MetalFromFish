@@ -22,3 +22,4 @@ bin/Debug/netstandard2.0/MetalFromFish_SN.pdb
 *.cache
 .bin\*
 .vs\*
+obj/Debug/netstandard2.0/MetalFromFish_SN.dll
