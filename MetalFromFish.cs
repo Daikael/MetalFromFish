@@ -14,7 +14,7 @@ namespace MetalFromFish.craftable
     {
         private const string myGUID = "Daikael.MetalFromFish";
         private const string pluginName = "Metal From Fsh";
-        private const string versionString = "1.4.0";
+        private const string versionString = "1.4.1";
         private static readonly Harmony harmony = new Harmony(myGUID);
 
 
@@ -42,7 +42,7 @@ namespace MetalFromFish.craftable
             new HoverfishGold().Patch();
             new CrashfishCaveSulphur().Patch();
             new RedeyeyeCrystalSulphur().Patch();
-            new SpinefishNickle().Patch();
+            new SpinefishNickel().Patch();
             new HolefishTooth().Patch();
             new MagmarangKyanite().Patch();
             new WasteToFood().Patch();

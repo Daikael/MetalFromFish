@@ -4,7 +4,7 @@
 .vs/ProjectEvaluation/metalfromfish.metadata.v5.2
 .vs/ProjectEvaluation/metalfromfish.projects.v5.2
 .vs/MetalFromFish/FileContentIndex
-.obj/Debug
+.obj
 .vs/MetalFromFish/DesignTimeBuild/.dtbcache.v2
 *.v2
 .vs/MetalFromFish/v17/.suo
@@ -23,3 +23,16 @@ bin/Debug/netstandard2.0/MetalFromFish_SN.pdb
 .bin\*
 .vs\*
 obj/Debug/netstandard2.0/MetalFromFish_SN.dll
+obj/project.assets.json
+obj/MetalFromFish.csproj.nuget.g.targets
+obj/MetalFromFish.csproj.nuget.g.props
+obj/MetalFromFish.csproj.nuget.dgspec.json
+obj/Debug/netstandard2.0/PluginInfo.cs
+obj/Debug/netstandard2.0/MetalFromFish.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/netstandard2.0/MetalFromFish.csproj.FileListAbsolute.txt
+obj/Debug/netstandard2.0/MetalFromFish.csproj.CopyComplete
+obj/Debug/netstandard2.0/MetalFromFish.AssemblyInfo.cs
+obj/Debug/netstandard2.0/.NETStandard,Version=v2.0.AssemblyAttributes.cs
+bin/Debug/netstandard2.0/SMLHelper.xml
+bin/Debug/netstandard2.0/SMLHelper.dll
+bin/Debug/netstandard2.0/MetalFromFish_SN.deps.json

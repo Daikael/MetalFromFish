@@ -1,8 +1,6 @@
 ﻿using HarmonyLib;
 using SMLHelper.V2.Json;
 using SMLHelper.V2.Options.Attributes;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace MetalFromFish.Configuration
 {
@@ -37,7 +35,7 @@ namespace MetalFromFish.Configuration
             new HoverfishGold().Patch();
             new CrashfishCaveSulphur().Patch();
             new RedeyeyeCrystalSulphur().Patch();
-            new SpinefishNickle().Patch();
+            new SpinefishNickel().Patch();
             new HolefishTooth().Patch();
             new MagmarangKyanite().Patch();
             //Applyoptions

@@ -9,16 +9,16 @@ using System.IO;
 
 namespace MetalFromFish
 {
-    internal class SpinefishNickle : Craftable
+    internal class SpinefishNickel : Craftable
     {
         public static TechType thisTechType;
-        public static Sprite sprite = GetSprite("DTNickle");
+        public static Sprite sprite = GetSprite("DTNickel");
 
-        public SpinefishNickle() : base("DTNickle", "Nickle Extraction", "Nickle extracted from a Spinefish.")
+        public SpinefishNickel() : base("DTNickel", "Nickel Extraction", "Nickel extracted from a Spinefish.")
         {
             OnFinishedPatching += () =>
             {
-                SpinefishNickle.thisTechType = base.TechType;
+                SpinefishNickel.thisTechType = base.TechType;
             };
         }
 
@@ -35,7 +35,7 @@ namespace MetalFromFish
             // Create a list to hold the linked items
             List<TechType> linkedItems = new List<TechType>();
 
-            // Add the appropriate number of TechType.Nickle entries to the linkedItems list
+            // Add the appropriate number of TechType.Nickel entries to the linkedItems list
             for (int i = 0; i < outputCount; i++)
             {
                 linkedItems.Add(TechType.Nickel);
