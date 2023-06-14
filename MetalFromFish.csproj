@@ -22,18 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\DTCopper.png" />
-    <Content Include="Assets\DTDiamond.png" />
-    <Content Include="Assets\DTGold.png" />
-    <Content Include="Assets\DTLead.png" />
-    <Content Include="Assets\DTLithium.png" />
-    <Content Include="Assets\DTMagnetite.png" />
-    <Content Include="Assets\DTQuartz.png" />
-    <Content Include="Assets\DTSilver.png" />
-    <Content Include="Assets\DTTitanium.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>

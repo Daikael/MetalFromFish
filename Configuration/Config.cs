@@ -38,6 +38,8 @@ namespace MetalFromFish.Configuration
             new SpinefishNickel().Patch();
             new HolefishTooth().Patch();
             new MagmarangKyanite().Patch();
+            new CrabsnakeRuby().Patch();
+            new LizardCrabsnakeUranite().Patch();
             //Applyoptions
         }
     }

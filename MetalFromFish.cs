@@ -46,6 +46,8 @@ namespace MetalFromFish.craftable
             new HolefishTooth().Patch();
             new MagmarangKyanite().Patch();
             new WasteToFood().Patch();
+            new CrabsnakeRuby().Patch();
+            new LizardCrabsnakeUranite().Patch();
 
             CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "MFF", "Fish Economy", SpriteManager.Get(TechType.Reginald), new string[]
             {
